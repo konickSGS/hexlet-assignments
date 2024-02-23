@@ -1,28 +1,33 @@
 package exercise;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 // BEGIN
 public class App {
     public static String[][] enlargeArrayImage(String[][] matrix) {
         return enlargeArrayImage(matrix, 2);
     }
 
-    public static String[][] enlargeArrayImage(String[][] matrix, int coef) {
-        int rowNumber = matrix.length;
-        int colNumber = (rowNumber > 0) ? matrix[0].length : 0;
+    public static String[][] enlargeArrayImage(String[][] arr, int coef) {
 
-        String[][] enlargeArray = new String[rowNumber * coef][colNumber * coef];
+        return Arrays.stream(arr)
+                .flatMap(line -> {
+                    String[][] repeatElemets = new String[coef][];
+                    Arrays.fill(repeatElemets, repeatElement(line, coef));
+                    return Stream.of(repeatElemets);
+                })
+                .toArray(String[][]::new);
+    }
 
-        for (int i = 0; i < rowNumber; ++i) {
-            for (int j = 0; j < colNumber; ++j) {
-                for (int ci = 0; ci < coef; ++ci) {
-                    for (int cj = 0; cj < coef; ++cj) {
-                        enlargeArray[i * coef + ci][j * coef + cj] = matrix[i][j];
-                    }
-                }
-            }
-        }
-
-        return enlargeArray;
+    private static String[] repeatElement(String[] line, int coef) {
+        return Arrays.stream(line)
+                .flatMap(string -> {
+                    String[] lines = new String[coef];
+                    Arrays.fill(lines, string);
+                    return Stream.of(lines);
+                })
+                .toArray(String[]::new);
     }
 }
 // END
