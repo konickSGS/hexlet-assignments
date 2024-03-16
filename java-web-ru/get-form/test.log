@@ -1,0 +1,231 @@
+./gradlew test
+> Task :generateEffectiveLombokConfig UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :generateTestEffectiveLombokConfig UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+
+AppTest STANDARD_ERROR
+    [Test worker] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/users]
+    [Test worker] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/]
+    [Test worker] INFO io.javalin.Javalin - Starting Javalin ...
+    [Test worker] INFO org.eclipse.jetty.server.Server - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 18.0.2+9-61
+    [Test worker] INFO org.eclipse.jetty.server.session.DefaultSessionIdManager - Session workerName=node0
+    [Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started i.j.j.@9f674ac{/,null,AVAILABLE}
+    [Test worker] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@d535a3d{HTTP/1.1, (http/1.1)}{0.0.0.0:45179}
+    [Test worker] INFO org.eclipse.jetty.server.Server - Started Server@1f1cddf3{STARTING}[11.0.15,sto=0] @834ms
+    [Test worker] INFO io.javalin.Javalin - 
+           __                  ___          ______
+          / /___ __   ______ _/ (_)___     / ____/
+     __  / / __ `/ | / / __ `/ / / __ \   /___ \
+    / /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+    \____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+           https://javalin.io/documentation
+
+    [Test worker] INFO io.javalin.Javalin - Listening on http://localhost:45179/
+    [Test worker] INFO io.javalin.Javalin - You are running Javalin 5.6.1 (released June 22, 2023. Your Javalin version is 268 days old. Consider checking for a newer version.).
+    [Test worker] INFO io.javalin.Javalin - Javalin started in 165ms \o/
+
+AppTest > testListUsers() STANDARD_ERROR
+    [JettyServerThreadPool-42] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: GET [/users]
+        Matching endpoint-handlers: [GET=/users]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:45179, Accept-Encoding=gzip}
+        Cookies: {}
+        Body: 
+        QueryString: null
+        QueryParams: {}
+        FormParams: {}
+    Response: [200 OK], execution took 504.98 ms
+        Headers: {Content-Encoding=gzip, Date=Sat, 16 Mar 2024 17:58:47 GMT, Content-Type=text/html}
+        Body is gzipped (3981 bytes, not logged)
+    ----------------------------------------------------------------------------------
+
+AppTest > testListUsers() PASSED
+
+AppTest > testListUsers1() STANDARD_ERROR
+    [JettyServerThreadPool-28] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: GET [/users]
+        Matching endpoint-handlers: [GET=/users]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:45179, Accept-Encoding=gzip}
+        Cookies: {}
+        Body: 
+        QueryString: term=s
+        QueryParams: {term=[s]}
+        FormParams: {}
+    Response: [200 OK], execution took 3.06 ms
+        Headers: {Date=Sat, 16 Mar 2024 17:58:47 GMT, Content-Type=text/html}
+        Body is 1116 bytes (starts on next line):
+    
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+            <div class="mx-auto p-4 py-md-5">
+            <main>
+          
+            <form action="/users" method="get">
+                <input type="search" name="term" value="s">
+                <input type="submit" name="Искать">
+            </form>
+
+        
+                <ul>
+                 {
+                    <li>
+                        Stacee Tremblay
+                    </li>
+                }
+                 {
+                    <li>
+                        Solomon Bayer
+                    </li>
+                }
+                 {
+                    <li>
+                        Serina Schaden
+                    </li>
+                }
+            
+                </ul>
+        
+    
+            </main>
+            </div>
+        </body>
+    </html>
+
+
+    ----------------------------------------------------------------------------------
+
+AppTest > testListUsers1() PASSED
+
+AppTest > testListUsers2() STANDARD_ERROR
+    [JettyServerThreadPool-40] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: GET [/users]
+        Matching endpoint-handlers: [GET=/users]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:45179, Accept-Encoding=gzip}
+        Cookies: {}
+        Body: 
+        QueryString: term=WI
+        QueryParams: {term=[WI]}
+        FormParams: {}
+    Response: [200 OK], execution took 0.58 ms
+        Headers: {Date=Sat, 16 Mar 2024 17:58:47 GMT, Content-Type=text/html}
+        Body is 1004 bytes (starts on next line):
+    
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+            <div class="mx-auto p-4 py-md-5">
+            <main>
+          
+            <form action="/users" method="get">
+                <input type="search" name="term" value="WI">
+                <input type="submit" name="Искать">
+            </form>
+
+        
+                <ul>
+                 {
+                    <li>
+                        Will Casper
+                    </li>
+                }
+                 {
+                    <li>
+                        Willis Jast
+                    </li>
+                }
+            
+                </ul>
+        
+    
+            </main>
+            </div>
+        </body>
+    </html>
+
+
+    ----------------------------------------------------------------------------------
+
+AppTest > testListUsers2() PASSED
+
+AppTest > testRootPage() STANDARD_ERROR
+    [JettyServerThreadPool-42] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: GET [/]
+        Matching endpoint-handlers: [GET=/]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:45179, Accept-Encoding=gzip}
+        Cookies: {}
+        Body: 
+        QueryString: null
+        QueryParams: {}
+        FormParams: {}
+    Response: [200 OK], execution took 122.34 ms
+        Headers: {Date=Sat, 16 Mar 2024 17:58:47 GMT, Content-Type=text/html}
+        Body is 605 bytes (starts on next line):
+    
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+            <div class="mx-auto p-4 py-md-5">
+            <main>
+          
+            <a href="/users">Пользователи</a>
+    
+            </main>
+            </div>
+        </body>
+    </html>
+
+
+    ----------------------------------------------------------------------------------
+
+AppTest > testRootPage() PASSED
+
+AppTest STANDARD_ERROR
+    [Test worker] INFO io.javalin.Javalin - Stopping Javalin ...
+    [Test worker] INFO org.eclipse.jetty.server.Server - Stopped Server@1f1cddf3{STOPPING}[11.0.15,sto=0]
+    [Test worker] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@d535a3d{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+    [Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped i.j.j.@9f674ac{/,null,STOPPED}
+    [Test worker] INFO io.javalin.Javalin - Javalin has stopped
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 2s
+5 actionable tasks: 1 executed, 4 up-to-date
