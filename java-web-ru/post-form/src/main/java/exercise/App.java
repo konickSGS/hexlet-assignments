@@ -40,7 +40,7 @@ public final class App {
         });
 
         app.get("/users/build", ctx -> {
-            ctx.render("users/vuild.jte");
+            ctx.render("users/build.jte");
         });
         // END
 

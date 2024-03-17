@@ -1,6 +1,6 @@
 @template.layout.page(
     content = @`
-        <form>
+        <form action="/users" method="post">
             <div>
                 <label>
                     <input type="text" required name="firstName" />
