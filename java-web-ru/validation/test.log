@@ -1,0 +1,545 @@
+./gradlew test
+> Task :generateEffectiveLombokConfig UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :generateTestEffectiveLombokConfig UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :test FAILED
+
+AppTest STANDARD_ERROR
+    [Test worker] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/]
+    [Test worker] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/articles]
+    [Test worker] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/articles/build]
+    [Test worker] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/articles]
+    [Test worker] INFO io.javalin.Javalin - Starting Javalin ...
+    [Test worker] INFO org.eclipse.jetty.server.Server - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 18.0.2+9-61
+    [Test worker] INFO org.eclipse.jetty.server.session.DefaultSessionIdManager - Session workerName=node0
+    [Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started i.j.j.@27953a83{/,null,AVAILABLE}
+    [Test worker] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@25a6944c{HTTP/1.1, (http/1.1)}{0.0.0.0:40893}
+    [Test worker] INFO org.eclipse.jetty.server.Server - Started Server@681a8b4e{STARTING}[11.0.15,sto=0] @671ms
+    [Test worker] INFO io.javalin.Javalin - 
+           __                  ___          ______
+          / /___ __   ______ _/ (_)___     / ____/
+     __  / / __ `/ | / / __ `/ / / __ \   /___ \
+    / /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+    \____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+           https://javalin.io/documentation
+
+    [Test worker] INFO io.javalin.Javalin - Listening on http://localhost:40893/
+    [Test worker] INFO io.javalin.Javalin - You are running Javalin 5.6.1 (released June 22, 2023. Your Javalin version is 269 days old. Consider checking for a newer version.).
+    [Test worker] INFO io.javalin.Javalin - Javalin started in 143ms \o/
+
+AppTest > testCreateArticleNegative1() STANDARD_OUT
+    ------------------------------
+
+AppTest > testCreateArticleNegative1() STANDARD_ERROR
+    [JettyServerThreadPool-42] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: POST [/articles]
+        Matching endpoint-handlers: [POST=/articles]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:40893, Accept-Encoding=gzip, Content-Length=32, Content-Type=application/x-www-form-urlencoded; charset=UTF-8}
+        Cookies: {}
+        Body: content=testBody&title=testTitle
+        QueryString: null
+        QueryParams: {}
+        FormParams: {content=[testBody], title=[testTitle]}
+    Response: [422 Unprocessable Content], execution took 492.30 ms
+        Headers: {Date=Mon, 18 Mar 2024 16:17:09 GMT, Content-Type=text/html}
+        Body is 854 bytes (starts on next line):
+    
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+        
+            <form action="/articles" method="post">
+                <div>
+                    <label>
+                        <input type="text" required name="title" value="testTitle" />
+                    </label>
+                    <textarea name="content">
+                        testBody
+                    </textarea>
+                </div>
+                <input type="submit" value="Искать">
+            </form>
+    
+        </body>
+    </html>
+
+
+    ----------------------------------------------------------------------------------
+
+AppTest > testCreateArticleNegative1() FAILED
+    java.lang.AssertionError: 
+    Expecting actual:
+      "
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+        
+            <form action="/articles" method="post">
+                <div>
+                    <label>
+                        <input type="text" required name="title" value="testTitle" />
+                    </label>
+                    <textarea name="content">
+                        testBody
+                    </textarea>
+                </div>
+                <input type="submit" value="Искать">
+            </form>
+    
+        </body>
+    </html>
+
+    "
+    to contain:
+      "Статья должна быть не короче 10 символов" 
+        at exercise.AppTest.testCreateArticleNegative1(AppTest.java:92)
+
+AppTest > testCreateArticleNegative2() STANDARD_OUT
+    ------------------------------
+
+AppTest > testCreateArticleNegative2() STANDARD_ERROR
+    [JettyServerThreadPool-28] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: POST [/articles]
+        Matching endpoint-handlers: [POST=/articles]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:40893, Accept-Encoding=gzip, Content-Length=28, Content-Type=application/x-www-form-urlencoded; charset=UTF-8}
+        Cookies: {}
+        Body: content=test+content&title=q
+        QueryString: null
+        QueryParams: {}
+        FormParams: {content=[test content], title=[q]}
+    Response: [422 Unprocessable Content], execution took 1.01 ms
+        Headers: {Date=Mon, 18 Mar 2024 16:17:10 GMT, Content-Type=text/html}
+        Body is 850 bytes (starts on next line):
+    
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+        
+            <form action="/articles" method="post">
+                <div>
+                    <label>
+                        <input type="text" required name="title" value="q" />
+                    </label>
+                    <textarea name="content">
+                        test content
+                    </textarea>
+                </div>
+                <input type="submit" value="Искать">
+            </form>
+    
+        </body>
+    </html>
+
+
+    ----------------------------------------------------------------------------------
+
+AppTest > testCreateArticleNegative2() FAILED
+    java.lang.AssertionError: 
+    Expecting actual:
+      "
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+        
+            <form action="/articles" method="post">
+                <div>
+                    <label>
+                        <input type="text" required name="title" value="q" />
+                    </label>
+                    <textarea name="content">
+                        test content
+                    </textarea>
+                </div>
+                <input type="submit" value="Искать">
+            </form>
+    
+        </body>
+    </html>
+
+    "
+    to contain:
+      "Название не должно быть короче двух символов" 
+        at exercise.AppTest.testCreateArticleNegative2(AppTest.java:111)
+
+AppTest > testCreateArticleNegative3() STANDARD_ERROR
+    [JettyServerThreadPool-40] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: POST [/articles]
+        Matching endpoint-handlers: [POST=/articles]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:40893, Accept-Encoding=gzip, Content-Length=39, Content-Type=application/x-www-form-urlencoded; charset=UTF-8}
+        Cookies: {}
+        Body: content=test+content&title=test+article
+        QueryString: null
+        QueryParams: {}
+        FormParams: {content=[test content], title=[test article]}
+    Response: [302 Found], execution took 0.44 ms
+        Headers: {Date=Mon, 18 Mar 2024 16:17:10 GMT, Content-Type=text/plain, Location=/articles}
+        Body is 10 bytes (starts on next line):
+        Redirected
+    ----------------------------------------------------------------------------------
+
+AppTest > testCreateArticleNegative3() STANDARD_OUT
+    ------------------------------
+
+AppTest > testCreateArticleNegative3() STANDARD_ERROR
+    [JettyServerThreadPool-29] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: POST [/articles]
+        Matching endpoint-handlers: [POST=/articles]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:40893, Accept-Encoding=gzip, Content-Length=41, Content-Type=application/x-www-form-urlencoded; charset=UTF-8}
+        Cookies: {}
+        Body: content=test+content+2&title=test+article
+        QueryString: null
+        QueryParams: {}
+        FormParams: {content=[test content 2], title=[test article]}
+    Response: [422 Unprocessable Content], execution took 0.86 ms
+        Headers: {Date=Mon, 18 Mar 2024 16:17:10 GMT, Content-Type=text/html}
+        Body is 863 bytes (starts on next line):
+    
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+        
+            <form action="/articles" method="post">
+                <div>
+                    <label>
+                        <input type="text" required name="title" value="test article" />
+                    </label>
+                    <textarea name="content">
+                        test content 2
+                    </textarea>
+                </div>
+                <input type="submit" value="Искать">
+            </form>
+    
+        </body>
+    </html>
+
+
+    ----------------------------------------------------------------------------------
+
+AppTest > testCreateArticleNegative3() FAILED
+    java.lang.AssertionError: 
+    Expecting actual:
+      "
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+        
+            <form action="/articles" method="post">
+                <div>
+                    <label>
+                        <input type="text" required name="title" value="test article" />
+                    </label>
+                    <textarea name="content">
+                        test content 2
+                    </textarea>
+                </div>
+                <input type="submit" value="Искать">
+            </form>
+    
+        </body>
+    </html>
+
+    "
+    to contain:
+      "Статья с таким названием уже существует" 
+        at exercise.AppTest.testCreateArticleNegative3(AppTest.java:138)
+
+AppTest > testNewArticlePage() STANDARD_ERROR
+    [JettyServerThreadPool-28] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: GET [/articles/build]
+        Matching endpoint-handlers: [GET=/articles/build]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:40893, Accept-Encoding=gzip}
+        Cookies: {}
+        Body: 
+        QueryString: null
+        QueryParams: {}
+        FormParams: {}
+    Response: [200 OK], execution took 0.54 ms
+        Headers: {Date=Mon, 18 Mar 2024 16:17:10 GMT, Content-Type=text/html}
+        Body is 828 bytes (starts on next line):
+    
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+        
+            <form action="/articles" method="post">
+                <div>
+                    <label>
+                        <input type="text" required name="title" />
+                    </label>
+                    <textarea name="content">
+                    
+                    </textarea>
+                </div>
+                <input type="submit" value="Искать">
+            </form>
+    
+        </body>
+    </html>
+
+
+    ----------------------------------------------------------------------------------
+
+AppTest > testNewArticlePage() PASSED
+
+AppTest > testRootPage() STANDARD_ERROR
+    [JettyServerThreadPool-44] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: GET [/]
+        Matching endpoint-handlers: [GET=/]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:40893, Accept-Encoding=gzip}
+        Cookies: {}
+        Body: 
+        QueryString: null
+        QueryParams: {}
+        FormParams: {}
+    Response: [200 OK], execution took 136.99 ms
+        Headers: {Date=Mon, 18 Mar 2024 16:17:10 GMT, Content-Type=text/html}
+        Body is 620 bytes (starts on next line):
+    
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+        
+            <div class="mx-auto p-4 py-md-5">
+                <main>
+                    <a href="/articles">Все статьи</a>
+                </main>
+            </div>
+    
+        </body>
+    </html>
+
+
+    ----------------------------------------------------------------------------------
+
+AppTest > testRootPage() PASSED
+
+AppTest > testCreateArticlePositive() STANDARD_ERROR
+    [JettyServerThreadPool-28] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: POST [/articles]
+        Matching endpoint-handlers: [POST=/articles]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:40893, Accept-Encoding=gzip, Content-Length=37, Content-Type=application/x-www-form-urlencoded; charset=UTF-8}
+        Cookies: {}
+        Body: content=test+content&title=test+title
+        QueryString: null
+        QueryParams: {}
+        FormParams: {content=[test content], title=[test title]}
+    Response: [302 Found], execution took 0.30 ms
+        Headers: {Date=Mon, 18 Mar 2024 16:17:10 GMT, Content-Type=text/plain, Location=/articles}
+        Body is 10 bytes (starts on next line):
+        Redirected
+    ----------------------------------------------------------------------------------
+    [JettyServerThreadPool-30] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: GET [/articles]
+        Matching endpoint-handlers: [GET=/articles]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:40893, Accept-Encoding=gzip}
+        Cookies: {}
+        Body: 
+        QueryString: null
+        QueryParams: {}
+        FormParams: {}
+    Response: [200 OK], execution took 145.03 ms
+        Headers: {Date=Mon, 18 Mar 2024 16:17:10 GMT, Content-Type=text/html}
+        Body is 1238 bytes (starts on next line):
+    
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+        
+            <div class="mx-auto p-4 py-md-5">
+                <main>
+                    <h1>Все статьи</h1>
+
+                    <div class="mb-3">
+                        <a href="/articles/build">Создать новую статью</a>
+                    </div>
+
+                    <table class="table table-striped">
+                    
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    test title
+                                </td>
+                                <td>
+                                    test content
+                                </td>
+                            </tr>
+                    
+                    </table>
+                </main>
+            </div>
+    
+        </body>
+    </html>
+
+
+    ----------------------------------------------------------------------------------
+
+AppTest > testCreateArticlePositive() PASSED
+
+AppTest > testListArticles() STANDARD_ERROR
+    [JettyServerThreadPool-44] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+    Request: GET [/articles]
+        Matching endpoint-handlers: [GET=/articles]
+        Headers: {User-Agent=unirest-java/3.1.00, Connection=keep-alive, Host=localhost:40893, Accept-Encoding=gzip}
+        Cookies: {}
+        Body: 
+        QueryString: null
+        QueryParams: {}
+        FormParams: {}
+    Response: [200 OK], execution took 0.36 ms
+        Headers: {Date=Mon, 18 Mar 2024 16:17:10 GMT, Content-Type=text/html}
+        Body is 835 bytes (starts on next line):
+    
+
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+                crossorigin="anonymous">
+        <title>Hello Hexlet!</title>
+        </head>
+        <body>
+        
+            <div class="mx-auto p-4 py-md-5">
+                <main>
+                    <h1>Все статьи</h1>
+
+                    <div class="mb-3">
+                        <a href="/articles/build">Создать новую статью</a>
+                    </div>
+
+                    <table class="table table-striped">
+                    
+                    </table>
+                </main>
+            </div>
+    
+        </body>
+    </html>
+
+
+    ----------------------------------------------------------------------------------
+
+AppTest > testListArticles() PASSED
+
+AppTest STANDARD_ERROR
+    [Test worker] INFO io.javalin.Javalin - Stopping Javalin ...
+    [Test worker] INFO org.eclipse.jetty.server.Server - Stopped Server@681a8b4e{STOPPING}[11.0.15,sto=0]
+    [Test worker] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@25a6944c{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+    [Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped i.j.j.@27953a83{/,null,STOPPED}
+    [Test worker] INFO io.javalin.Javalin - Javalin has stopped
+
+7 tests completed, 3 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///home/gilsar/Hexlet/hexlet-assignments/java-web-ru/validation/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 2s
+5 actionable tasks: 1 executed, 4 up-to-date
+make: *** [Makefile:2: test] Error 1
