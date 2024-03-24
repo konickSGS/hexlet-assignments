@@ -1,0 +1,295 @@
+./gradlew run
+> Task :generateEffectiveLombokConfig UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [org.slf4j.simple.SimpleServiceProvider@224edc67]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@14acaea5]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [org.slf4j.simple.SimpleServiceProvider@224edc67]
+[main] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/]
+[main] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/posts]
+[main] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/posts/{id}]
+[main] INFO io.javalin.Javalin - Starting Javalin ...
+[main] INFO org.eclipse.jetty.server.Server - jetty-11.0.20; built: 2024-01-29T21:04:22.394Z; git: 922f8dc188f7011e60d0361de585fd4ac4d63064; jvm 18.0.2+9-61
+[main] INFO org.eclipse.jetty.server.session.DefaultSessionIdManager - Session workerName=node0
+[main] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@c03cf28{/,null,AVAILABLE}
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@78e117e3{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+[main] INFO org.eclipse.jetty.server.Server - Started Server@c267ef4{STARTING}[11.0.20,sto=0] @411ms
+[main] INFO io.javalin.Javalin - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+[main] INFO io.javalin.Javalin - Javalin started in 193ms \o/
+[main] INFO io.javalin.Javalin - Listening on http://localhost:7070/
+[main] INFO io.javalin.Javalin - You are running Javalin 6.1.3 (released March 2, 2024).
+[JettyServerThreadPool-38] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@2e2558fb
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Sec-Fetch-Dest=document, Sec-Fetch-Site=none, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 493.68 ms
+    Headers: {Date=Sun, 24 Mar 2024 10:50:34 GMT, Content-Type=text/html}
+    Body is 685 bytes (starts on next line):
+    
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
+    <title>Hello Hexlet!</title>
+    </head>
+    <body>
+        
+        <div class="mx-auto p-4 py-md-5">
+            <main>
+                  <a href="/posts">Все посты</a>
+            </main>
+        </div>
+    
+    </body>
+    <footer>
+        <a href="/posts">Все посты</a>
+    </footer>
+</html>
+
+
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-24] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@6cb494ad
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 269.63 ms
+    Headers: {Content-Encoding=gzip, Date=Sun, 24 Mar 2024 10:50:37 GMT, Content-Type=text/html}
+    Body is gzipped (2805 bytes, not logged)
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-36] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts/33889418]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@5068fc5c
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/posts, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 107.66 ms
+    Headers: {Date=Sun, 24 Mar 2024 10:50:38 GMT, Content-Type=text/html}
+    Body is 814 bytes (starts on next line):
+    
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
+    <title>Hello Hexlet!</title>
+    </head>
+    <body>
+        
+        <div class="mx-auto p-4 py-md-5">
+            <main>
+                <h1>
+                    Sleep the Brave
+                </h1>
+                <p>
+                    Totam assumenda eius autem similique.
+                </p>
+            </main>
+        </div>
+    
+    </body>
+    <footer>
+        <a href="/posts">Все посты</a>
+    </footer>
+</html>
+
+
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-38] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@4d486973
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/posts/33889418, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 0.58 ms
+    Headers: {Content-Encoding=gzip, Date=Sun, 24 Mar 2024 10:50:40 GMT, Content-Type=text/html}
+    Body is gzipped (2805 bytes, not logged)
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-36] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@120b71da
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/posts, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: page=2
+    QueryParams: {page=[2]}
+    FormParams: {}
+Response: [200 OK], execution took 1.25 ms
+    Headers: {Content-Encoding=gzip, Date=Sun, 24 Mar 2024 10:50:44 GMT, Content-Type=text/html}
+    Body is gzipped (2903 bytes, not logged)
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-38] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@7c0ce280
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/posts?page=2, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: page=3
+    QueryParams: {page=[3]}
+    FormParams: {}
+Response: [200 OK], execution took 0.67 ms
+    Headers: {Content-Encoding=gzip, Date=Sun, 24 Mar 2024 10:50:44 GMT, Content-Type=text/html}
+    Body is gzipped (2852 bytes, not logged)
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-36] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@26adc0fa
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/posts?page=3, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: page=4
+    QueryParams: {page=[4]}
+    FormParams: {}
+Response: [200 OK], execution took 0.64 ms
+    Headers: {Content-Encoding=gzip, Date=Sun, 24 Mar 2024 10:50:45 GMT, Content-Type=text/html}
+    Body is gzipped (2801 bytes, not logged)
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-38] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@5a6e1c5c
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/posts?page=4, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: page=5
+    QueryParams: {page=[5]}
+    FormParams: {}
+Response: [200 OK], execution took 0.75 ms
+    Headers: {Content-Encoding=gzip, Date=Sun, 24 Mar 2024 10:50:45 GMT, Content-Type=text/html}
+    Body is gzipped (2818 bytes, not logged)
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-36] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@42f4e63a
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/posts?page=5, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: page=6
+    QueryParams: {page=[6]}
+    FormParams: {}
+Response: [200 OK], execution took 0.63 ms
+    Headers: {Content-Encoding=gzip, Date=Sun, 24 Mar 2024 10:50:46 GMT, Content-Type=text/html}
+    Body is gzipped (2887 bytes, not logged)
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-38] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@28ff4fff
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/posts?page=6, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: page=7
+    QueryParams: {page=[7]}
+    FormParams: {}
+Response: [200 OK], execution took 0.56 ms
+    Headers: {Content-Encoding=gzip, Date=Sun, 24 Mar 2024 10:50:48 GMT, Content-Type=text/html}
+    Body is gzipped (1760 bytes, not logged)
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-36] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts/2084]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@55e96824
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/posts?page=7, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 0.49 ms
+    Headers: {Date=Sun, 24 Mar 2024 10:50:50 GMT, Content-Type=text/html}
+    Body is 870 bytes (starts on next line):
+    
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
+    <title>Hello Hexlet!</title>
+    </head>
+    <body>
+        
+        <div class="mx-auto p-4 py-md-5">
+            <main>
+                <h1>
+                    Those Barren Leaves, Thrones, Dominations
+                </h1>
+                <p>
+                    Accusamus assumenda ducimus quae magni explicabo blanditiis itaque.
+                </p>
+            </main>
+        </div>
+    
+    </body>
+    <footer>
+        <a href="/posts">Все посты</a>
+    </footer>
+</html>
+
+
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-38] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts/1000]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@24ba5e9
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Sec-Fetch-Dest=document, Sec-Fetch-Site=none, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [404 Not Found], execution took 1.21 ms
+    Headers: {Date=Sun, 24 Mar 2024 10:50:54 GMT, Content-Type=text/plain}
+    Body is 14 bytes (starts on next line):
+    Post not found
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-36] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/posts]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@1ca546e2
+    Headers: {Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/posts/2084, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 0.85 ms
+    Headers: {Content-Encoding=gzip, Date=Sun, 24 Mar 2024 10:51:00 GMT, Content-Type=text/html}
+    Body is gzipped (2805 bytes, not logged)
+----------------------------------------------------------------------------------
+make: *** [Makefile:5: start] Error 130
