@@ -1,0 +1,226 @@
+./gradlew run
+> Task :generateEffectiveLombokConfig UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+[main] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/]
+[main] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: GET[/sessions/build]
+[main] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/sessions]
+[main] INFO io.javalin.Javalin - JAVALIN HANDLER REGISTRATION DEBUG LOG: POST[/sessions/delete]
+[main] INFO io.javalin.Javalin - Starting Javalin ...
+[main] INFO org.eclipse.jetty.server.Server - jetty-11.0.20; built: 2024-01-29T21:04:22.394Z; git: 922f8dc188f7011e60d0361de585fd4ac4d63064; jvm 18.0.2+9-61
+[main] INFO org.eclipse.jetty.server.session.DefaultSessionIdManager - Session workerName=node0
+[main] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@41a2befb{/,null,AVAILABLE}
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@7c417213{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+[main] INFO org.eclipse.jetty.server.Server - Started Server@3901d134{STARTING}[11.0.20,sto=0] @377ms
+[main] INFO io.javalin.Javalin - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+[main] INFO io.javalin.Javalin - Javalin started in 186ms \o/
+[main] INFO io.javalin.Javalin - Listening on http://localhost:7070/
+[main] INFO io.javalin.Javalin - You are running Javalin 6.1.3 (released March 2, 2024).
+[JettyServerThreadPool-38] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@547ad5bb
+    Headers: {Cookie=token=RpncqQGORn; JSESSIONID=node01qgntfp7eevdvpukcmk0x2g6w0.node0, Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, Upgrade-Insecure-Requests=1, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Sec-Fetch-Dest=document, Sec-Fetch-Site=none, Host=localhost:7070, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate}
+    Cookies: {token=RpncqQGORn, JSESSIONID=node01qgntfp7eevdvpukcmk0x2g6w0.node0}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 498.90 ms
+    Headers: {Date=Sat, 30 Mar 2024 12:20:32 GMT, Content-Type=text/html}
+    Body is 570 bytes (starts on next line):
+    
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
+    <title>Hello Hexlet!</title>
+    </head>
+    <body>
+        
+        
+            <a href="/sessions/build">
+                Войти
+            </a>
+        
+    
+    </body>
+</html>
+
+
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-24] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/sessions/build]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@2aa4f0c3
+    Headers: {Cookie=token=RpncqQGORn; JSESSIONID=node01qgntfp7eevdvpukcmk0x2g6w0.node0, Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate, Upgrade-Insecure-Requests=1, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5}
+    Cookies: {token=RpncqQGORn, JSESSIONID=node01qgntfp7eevdvpukcmk0x2g6w0.node0}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 134.88 ms
+    Headers: {Date=Sat, 30 Mar 2024 12:20:34 GMT, Content-Type=text/html}
+    Body is 971 bytes (starts on next line):
+    
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
+    <title>Hello Hexlet!</title>
+    </head>
+    <body>
+        
+        
+
+        <form method="post" action="/sessions">
+            <div>
+                <label>
+                    <p>Login: </p>
+                    <input type="text" required name="name">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <p>Password: </p>
+                    <input type="password" required name="password">
+                </label>
+            </div>
+            <input type="submit" value="Войти">
+        </form>
+    
+    </body>
+</html>
+
+
+----------------------------------------------------------------------------------
+((((((((((((((
+true
+[JettyServerThreadPool-36] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: POST [/sessions]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@1c63648b
+    Headers: {Origin=http://localhost:7070, Cookie=token=RpncqQGORn; JSESSIONID=node01qgntfp7eevdvpukcmk0x2g6w0.node0, Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/sessions/build, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate, Upgrade-Insecure-Requests=1, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Content-Length=26, Content-Type=application/x-www-form-urlencoded}
+    Cookies: {token=RpncqQGORn, JSESSIONID=node01qgntfp7eevdvpukcmk0x2g6w0.node0}
+    Body: name=admin&password=secret
+    QueryString: null
+    QueryParams: {}
+    FormParams: {name=[admin], password=[secret]}
+Response: [302 Found], execution took 15.47 ms
+    Headers: {Set-Cookie=JSESSIONID=node0zc4ernurjmbwtnvrx4wj8w510.node0; Path=/; HttpOnly; SameSite=Lax, Expires=Thu, 01 Jan 1970 00:00:00 GMT, Date=Sat, 30 Mar 2024 12:20:41 GMT, Content-Type=text/plain, Location=/}
+    Body is 10 bytes (starts on next line):
+    Redirected
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-38] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@4b91304e
+    Headers: {Cookie=token=RpncqQGORn; JSESSIONID=node0zc4ernurjmbwtnvrx4wj8w510.node0, Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Referer=http://localhost:7070/sessions/build, Connection=keep-alive, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate, Upgrade-Insecure-Requests=1, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5}
+    Cookies: {token=RpncqQGORn, JSESSIONID=node0zc4ernurjmbwtnvrx4wj8w510.node0}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 0.43 ms
+    Headers: {Date=Sat, 30 Mar 2024 12:20:42 GMT, Content-Type=text/html}
+    Body is 796 bytes (starts on next line):
+    
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
+    <title>Hello Hexlet!</title>
+    </head>
+    <body>
+        
+        
+            <h1>admin</h1>
+            <form method="post" action="sessions/delete">
+                <div>
+                    <label>
+                        <p>Выйти</p>
+                        <input type="submit" value="Выйти">
+                    </label>
+                </div>
+            </form>
+        
+    
+    </body>
+</html>
+
+
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-36] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: POST [/sessions/delete]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@8146387
+    Headers: {Origin=http://localhost:7070, Cookie=token=RpncqQGORn; JSESSIONID=node0zc4ernurjmbwtnvrx4wj8w510.node0, Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Connection=keep-alive, Referer=http://localhost:7070/, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate, Upgrade-Insecure-Requests=1, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5, Content-Length=0, Content-Type=application/x-www-form-urlencoded}
+    Cookies: {token=RpncqQGORn, JSESSIONID=node0zc4ernurjmbwtnvrx4wj8w510.node0}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [302 Found], execution took 0.53 ms
+    Headers: {Date=Sat, 30 Mar 2024 12:20:47 GMT, Content-Type=text/plain, Location=/}
+    Body is 10 bytes (starts on next line):
+    Redirected
+----------------------------------------------------------------------------------
+[JettyServerThreadPool-38] INFO io.javalin.Javalin - JAVALIN REQUEST DEBUG LOG:
+Request: GET [/]
+    Matching endpoint-handlers: java.util.stream.ReferencePipeline$3@4dc629d5
+    Headers: {Cookie=token=RpncqQGORn; JSESSIONID=node0zc4ernurjmbwtnvrx4wj8w510.node0, Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8, User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0, Referer=http://localhost:7070/, Connection=keep-alive, Sec-Fetch-Dest=document, Sec-Fetch-Site=same-origin, Host=localhost:7070, Accept-Encoding=gzip, deflate, br, Sec-Fetch-Mode=navigate, Upgrade-Insecure-Requests=1, Sec-Fetch-User=?1, Accept-Language=en-US,en;q=0.5}
+    Cookies: {token=RpncqQGORn, JSESSIONID=node0zc4ernurjmbwtnvrx4wj8w510.node0}
+    Body: 
+    QueryString: null
+    QueryParams: {}
+    FormParams: {}
+Response: [200 OK], execution took 0.39 ms
+    Headers: {Date=Sat, 30 Mar 2024 12:20:47 GMT, Content-Type=text/html}
+    Body is 570 bytes (starts on next line):
+    
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
+    <title>Hello Hexlet!</title>
+    </head>
+    <body>
+        
+        
+            <a href="/sessions/build">
+                Войти
+            </a>
+        
+    
+    </body>
+</html>
+
+
+----------------------------------------------------------------------------------
+make: *** [Makefile:5: start] Error 130
