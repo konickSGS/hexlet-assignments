@@ -1,0 +1,75 @@
+./gradlew test
+> Task :prepareInplaceWebAppFolder UP-TO-DATE
+> Task :createInplaceWebAppFolder UP-TO-DATE
+> Task :generateEffectiveLombokConfig UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :prepareInplaceWebAppClasses UP-TO-DATE
+> Task :prepareInplaceWebApp UP-TO-DATE
+> Task :generateTestEffectiveLombokConfig UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+Mar 31, 2024 2:35:16 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mar 31, 2024 2:35:16 PM org.apache.juli.logging.Log$info$1 call
+INFO: Tomcat 10.1.10 started and listening on port 8080
+Mar 31, 2024 2:35:16 PM org.apache.juli.logging.Log$info$1 call
+INFO:  runs at:
+Mar 31, 2024 2:35:16 PM org.apache.juli.logging.Log$info$1 call
+INFO:   http://localhost:8080
+> Task :appBeforeIntegrationTest
+
+> Task :test FAILED
+
+AppTest > testMainPage() PASSED
+
+AppTest > testHelloPage() FAILED
+    java.lang.AssertionError: 
+    Expecting actual:
+      "
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>JSP Example</title>
+        </head>
+        <body>
+            <div>Hello, Guest!</div>
+        </body>
+    </html>
+    "
+    to contain:
+      "Hello, user1!" 
+        at exercise.AppTest.testHelloPage(AppTest.java:30)
+
+2 tests completed, 1 failed
+Mar 31, 2024 2:35:17 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesObjectStreamClassCaches
+WARNING: You need to add "--add-opens=java.base/java.io=ALL-UNNAMED" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
+Mar 31, 2024 2:35:17 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalsForLeaks
+WARNING: You need to add "--add-opens=java.base/java.lang=ALL-UNNAMED" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
+Mar 31, 2024 2:35:17 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesRmiTargets
+WARNING: You need to add "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
+
+> Task :appAfterIntegrationTest
+Server stopped.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///home/gilsar/Hexlet/hexlet-assignments/java-web-ru/servlets/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 4s
+9 actionable tasks: 3 executed, 6 up-to-date
+make: *** [Makefile:2: test] Error 1
